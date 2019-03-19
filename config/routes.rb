@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   # end
   namespace :api do
     get '/offplayers' => 'offplayers#index'
+    post '/offplayers' => 'offplayers#create'
   end
 end
