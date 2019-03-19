@@ -1,0 +1,2 @@
+class OffPlayer < ApplicationRecord
+end
