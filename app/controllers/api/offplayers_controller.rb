@@ -23,5 +23,15 @@ class Api::OffplayersController < ApplicationController
     render 'show.json.jbuilder'
   end
 
+  def show
+    @offplayer = OffPlayer.find(params[:id])
+    render 'show.json.jbuilder'
+  end
+
+  def destroy
+    @offplayer = OffPlayer.find(params[:id])
+    @offplayer.destroy
+    render 'destroy.json.jbuilder'
+  end
 
 end

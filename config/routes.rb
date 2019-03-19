@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     get '/offplayers' => 'offplayers#index'
     post '/offplayers' => 'offplayers#create'
     patch '/offplayers/:id' => 'offplayers#update'
-    
+    get '/offplayers/:id' => 'offplayers#show'
+    delete 'offplayers/:id' => 'offplayers#destroy'
   end
 end
