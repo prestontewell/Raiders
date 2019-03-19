@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   namespace :api do
     get '/offplayers' => 'offplayers#index'
     post '/offplayers' => 'offplayers#create'
+    patch '/offplayers/:id' => 'offplayers#update'
+    
   end
 end

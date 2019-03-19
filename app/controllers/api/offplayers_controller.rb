@@ -13,4 +13,15 @@ class Api::OffplayersController < ApplicationController
     @offplayer.save
     render 'show.json.jbuilder'
   end
+
+  def update
+    @offplayer = OffPlayer.find(params[:id])
+    @offplayer.name = params[:name] || @offplayer.name
+    @offplayer.number = params[:number] || @offplayer.number
+    @offplayer.position = params[:position] || @offplayer.position
+    @offplayer.save
+    render 'show.json.jbuilder'
+  end
+
+
 end
